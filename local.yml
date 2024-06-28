@@ -1,10 +1,9 @@
----
-- name: Intro to Ansible Playbooks
-  hosts: all
-
+- name: My first play
+  hosts: myhosts
   tasks:
-  - name: Add the user 'bob'
-    ansible.builtin.user:
-      name: bob
-    become: yes
-    become_method: sudo
+   - name: Ping my hosts
+     ansible.builtin.ping:
+
+   - name: Print message
+     ansible.builtin.debug:
+      msg: Hello world
