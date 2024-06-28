@@ -2,4 +2,5 @@
   hosts: web_servers
   tasks:
   - name: Uninstall nano
-    ansible.builtin.command: "sudo apt purge nano"
+    ansible.builtin.command:
+      cmd: touch /home/ansible/hola.txt
