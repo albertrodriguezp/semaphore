@@ -1,7 +1,5 @@
 - name: My first play
   hosts: web_servers
-  become: yes
   tasks:
   - name: Uninstall nano
-    command:
-      cmd: sudo apt purge nano
+    ansible.builtin.command: cat /etc/passwd
