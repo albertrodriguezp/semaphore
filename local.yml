@@ -3,4 +3,4 @@
   become: yes
   tasks:
   - name: Uninstall nano
-    shell: apt purge nano
+    shell: "echo hola"
