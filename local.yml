@@ -4,4 +4,4 @@
   - name: Uninstall nano
     ansible.builtin.apt:
       name: nano
-      state: absent
+      state: present
