@@ -1,7 +1,10 @@
 ---
-- hosts: web_servers
-  become: true
+- name: Intro to Ansible Playbooks
+  hosts: all
+
   tasks:
-    - name: Print OS info
-      ansible.builtin.package:
-        name: apache2
+  - name: Copy file hosts with permissions
+    ansible.builtin.copy:
+      src: ./hosts
+      dest: /tmp/hosts_backup
+      mode: '0644'
