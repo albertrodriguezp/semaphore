@@ -1,7 +1,7 @@
 - name: My first play
   hosts: web_servers
+  become: yes
   tasks:
   - name: Uninstall nano
     ansible.builtin.command:
-      cmd: echo 'hola' >> /home/ansible/text
-#      cmd: touch /home/ansible/log.txt
+      cmd: apt purge nano
