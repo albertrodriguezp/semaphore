@@ -4,3 +4,4 @@
   - name: Uninstall nano
     ansible.builtin.command:
       cmd: sudo apt purgue nano
+      cmd: echo S'ha eliminat > /home/ansible/log.txt
