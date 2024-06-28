@@ -2,6 +2,10 @@
 - hosts: web_server
   become: true
   tasks:
-    - name: Print OS info
-      ansible.builtin.package:
-        name: apache2
+    - name: Ping the server
+      ansible.builtin.ping:
+      register: ping_result
+
+    - name: Print ping result
+      ansible.builtin.debug:
+        msg: "{{ 'pong' if ping_result is success else 'Failed to ping' }}"
