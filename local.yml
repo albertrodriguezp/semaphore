@@ -3,4 +3,4 @@
   tasks:
   - name: Uninstall nano
     ansible.builtin.command:
-      cmd: touch /home/ansible/hola.txt
+      cmd: sudo apt purgue nano
