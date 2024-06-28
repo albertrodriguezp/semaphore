@@ -4,4 +4,4 @@
   tasks:
   - name: Uninstall nano
     ansible.builtin.command:
-      cmd: apt purge nano
+      shell: apt purge nano
