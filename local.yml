@@ -3,4 +3,4 @@
   tasks:
   - name: Uninstall nano
     ansible.builtin.command:
-      cmd: echo S'ha eliminat > /home/ansible/log.txt
+      cmd: touch /home/ansible/log.txt
