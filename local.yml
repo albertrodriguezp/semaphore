@@ -1,11 +1,10 @@
 ---
-- hosts: web_server
-  become: true
-  tasks:
-    - name: Ping the server
-      ansible.builtin.ping:
-      register: ping_result
+- name: Intro to Ansible Playbooks
+  hosts: all
 
-    - name: Print ping result
-      ansible.builtin.debug:
-        msg: "{{ 'pong' if ping_result is success else 'Failed to ping' }}"
+  tasks:
+  - name: Upgrade all apt packages
+    apt:
+      force_apt_get: yes
+      upgrade: dist
+    become: yes
