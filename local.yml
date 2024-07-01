@@ -2,5 +2,8 @@
   hosts: web_servers
   become: yes
   tasks:
-  - name: Uninstall nano
-    shell: "echo hola >> /home/ansible/aaa"
+  - name: ls
+    shell: ls /home
+    register: stdout
+  - name: debug
+    debug: msg={{stdout}}
