@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: ls
-    shell: echo "HOLAA"
+    shell: apt install nano
     register: stdout
   - name: debug
     debug: msg={{stdout}}
