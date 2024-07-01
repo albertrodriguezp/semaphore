@@ -3,7 +3,9 @@
   become: yes
   tasks:
   - name: ls
-    shell: apt install nano -y
+    shell: |
+      cd /tmp
+      ls
     register: stdout
   - name: debug
     debug: msg={{stdout}}
