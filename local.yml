@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: ls
-    shell: ls /home
+    shell: echo "HOLAA"
     register: stdout
   - name: debug
     debug: msg={{stdout}}
