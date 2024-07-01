@@ -1,10 +1,9 @@
 - name: My first play
   hosts: web_servers
-  become: yes
   tasks:
   - name: ls
     shell: |
-      cd /tmp
+      cd /home/sistemes
       ls
     register: stdout
   - name: debug
