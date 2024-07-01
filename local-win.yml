@@ -1,6 +1,5 @@
 - name: My first play
   hosts: web_servers
-  become: yes
   tasks:
   - name: ls
     shell: |
